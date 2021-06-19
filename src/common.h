@@ -2,3 +2,4 @@
 #define SERV_PORT "8080"
 #define SERV_ADDR "127.0.0.1"
 
+#define MAXCLI 1024

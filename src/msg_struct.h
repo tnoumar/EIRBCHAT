@@ -2,7 +2,7 @@
 #define INFOS_LEN 128
 
 enum msg_type { 
-	NICKNAME_NEW,
+	NICKNAME_NEW, //0
 	NICKNAME_LIST,
 	NICKNAME_INFOS,
 	ECHO_SEND,
@@ -20,7 +20,7 @@ enum msg_type {
 	FILE_ACK
 };
 
-struct message {
+struct message { 
 	int pld_len;
 	char nick_sender[NICK_LEN];
 	enum msg_type type;

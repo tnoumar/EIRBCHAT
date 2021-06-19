@@ -1,0 +1,37 @@
+ALL: default
+
+CC           = gcc
+CLINKER      = $(CC)
+OPTFLAGS     = -O0
+
+
+SHELL = /bin/sh
+
+CFLAGS  =   -DREENTRANT -Wunused -Wall -g
+CCFLAGS = $(CFLAGS)
+LIBS =  -lpthread
+
+INCLUDES= -I ./inc/
+EXECS = client_poll server_poll2
+default: $(EXECS)
+
+client_poll: client_poll.c client_utils.o
+	$(CLINKER) $(OPTFLAGS)  -o client_poll client_poll.c client_utils.o $(LIBS)
+	mv client_poll ./bin/
+	mv client_utils.o ./bin/
+
+server_poll2: server_poll2.c server_utils.o
+	$(CLINKER) $(OPTFLAGS)  -o server_poll2 server_poll2.c server_utils.o $(LIBS)
+	mv server_poll2 ./bin/
+	mv server_utils.o ./bin/
+
+
+clean:
+	@-/bin/rm -f *.o *~ PI* $(EXECS) *.out core
+	rm -rf ./bin/*
+.c:
+	$(CC) $(CFLAGS)   -o $* $< $(LIBS)
+.c.o:
+	$(CC) $(CFLAGS) -c $<
+.o:
+	${CLINKER} $(OPTFLAGS)  -o $* $*.o $(LIBS)
