@@ -21,7 +21,7 @@
 
 **EIRBCHAT**
 
-EIRBCHAT is a simple IRC messaging service fully written in C that was implemented in the context of an academic Network Programming project.
+EIRBCHAT is a simple IRC messaging service fully written in C that was implemented in the context of an academic Network Programming project (RE216).
 
 # Context
 
