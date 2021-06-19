@@ -31,7 +31,44 @@ The objective of the project is to create a client / server chat application in 
 
 The underlying objective of this project is the manipulation of the network primitives and POSIX C sockets that you have seen in progress (socket (), bind (), listen (), connect (), accept (), send ( ), recv ()), as well as the implementation of communications over TCP / IP.
 
+# Compilation 
+In order to compile the project,
+ ```                                                      
+$ cd src/
+$ make 
+ ```                                                      
 
+# Server Side 
+  ```                                                      
+$ cd bin/
+$ ./server_exec port
+_______ _ ______  ______  _______ _     _ _______ _______ 
+(_______) (_____ \(____  \(_______|_)   (_|_______|_______)
+ _____  | |_____) )____)  )_       _______ _______    _    
+|  ___) | |  __  /|  __  (| |     |  ___  |  ___  |  | |   
+| |_____| | |  \ \| |__)  ) |_____| |   | | |   | |  | |   
+|_______)_|_|   |_|______/ \______)_|   |_|_|   |_|  |_|   
+                                                           BINDIN' ....start accepting...
+nouveau client connecté[127.0.0.1:34666]
+ fd : 0 	port : 0 	 addr :(null) 	conn_time : 	
+ fd : 0 	port : 0 	 addr :root 	conn_time :2021/06/19@13:29 	
+ fd : 4 	port : 34666 	 addr :127.0.0.1 	conn_time :2021/06/19@13:30 	
 
+ ```                                                      
+The server keeps track of connected clients and shows some logging on the terminalis
 
+# Client Side 
+
+ ```                                                      
+$ cd bin/
+$ ./client_exec server_ip_address server_port
+SERVER -> : 	[EIRBCHAT]  : please login with /nick <your pseudo>
+/nick tnoumar
+
+ [CLIENT]:  	SERVER -> : 	Welcome to the chat, tnoumar
+ ```                                                      
+
+Once you execute the previous commands, you get this terminal interface which resembles an IRC UI.
+
+This project was tested locally. It should be working fine on a remote server with proper configuration.
 
