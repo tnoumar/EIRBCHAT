@@ -70,5 +70,20 @@ SERVER -> : 	[EIRBCHAT]  : please login with /nick <your pseudo>
 
 Once you execute the previous commands, you get this terminal interface which resembles an IRC UI.
 
+# List of available commands
+  - ``` /nick username```: Choose a cool username.
+  - ``` /who```: Show the list of connected users (in the current chat room).
+  - ``` /whois username```: Show information about a specific username.
+  - ``` /msgall msg```: Send a msg to everyone in the chat room.
+  - ``` /msg user1 msg```: Send a msg to user1 in the chat room.
+  - ``` /create channel```: Create a channel and join it.
+  - ``` /join channel```: Join channel.
+  - ``` /quit channel```: Quit channel.
+  - ``` /send user1 file.txt```: Send a file to a specific user.
+
+
+
+
+
 This project was tested locally. It should be working fine on a remote server with proper configuration.
 
